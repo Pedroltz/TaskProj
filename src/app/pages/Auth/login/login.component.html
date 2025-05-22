@@ -1,0 +1,20 @@
+<div class="login-box">
+  <h2>Login</h2>
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <label>
+      Email
+      <input name="email" [(ngModel)]="credentials.email" required email />
+    </label>
+    <label>
+      Senha
+      <input name="password" type="password" [(ngModel)]="credentials.password" required />
+    </label>
+    <button type="submit" [disabled]="f.invalid">Entrar</button>
+  </form>
+
+  <p *ngIf="error" class="error">{{ error }}</p>
+
+  <div class="link-box">
+    <a (click)="goToRegister()" style="cursor: pointer;">Criar conta</a>
+  </div>
+</div>
