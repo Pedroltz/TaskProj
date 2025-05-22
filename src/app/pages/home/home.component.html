@@ -1,1 +1,75 @@
-<app-navbar>
+<app-navbar></app-navbar>
+
+<div class="home-container">
+
+  <div class="toggle-button">
+    <button (click)="toggleForm()">
+      {{ showForm ? 'Cancelar' : 'Criar Nova Tarefa' }}
+    </button>
+  </div>
+
+  <div class="task-form" *ngIf="showForm">
+    <h2>{{ editingTaskId ? 'Editar Tarefa' : 'Nova Tarefa' }}</h2>
+    <form (ngSubmit)="editingTaskId ? updateTask(editingTaskId) : createTask()" #f="ngForm">
+      <label>
+        Título
+        <input name="title" [(ngModel)]="newTask.title" required />
+      </label>
+      <label>
+        Descrição
+        <textarea name="description" [(ngModel)]="newTask.description" rows="3"></textarea>
+      </label>
+      <label>
+        Data de Entrega
+        <input type="datetime-local" name="dueDate" [(ngModel)]="newTask.dueDate" required />
+      </label>
+      <label>
+        Prioridade
+        <select name="priority" [(ngModel)]="newTask.priority" required>
+          <option [value]="1">Baixa</option>
+          <option [value]="2">Média</option>
+          <option [value]="3">Alta</option>
+        </select>
+      </label>
+      <label>
+        Status
+        <select name="status" [(ngModel)]="newTask.status" required>
+          <option value="pending">Pendente</option>
+          <option value="in-progress">Em andamento</option>
+          <option value="completed">Concluída</option>
+        </select>
+      </label>
+      <button type="submit" [disabled]="f.invalid">
+        {{ editingTaskId ? 'Salvar' : 'Adicionar' }}
+      </button>
+    </form>
+  </div>
+
+  <div class="task-list">
+    <h2>Minhas Tarefas</h2>
+    <div *ngIf="tasks.length === 0" class="empty-state">Nenhuma tarefa ainda.</div>
+
+    <div *ngFor="let task of tasks" class="task-card">
+      <h3>{{ task.title }}</h3>
+      <p>{{ task.description }}</p>
+      <div class="task-meta">
+        <span>📅 {{ task.dueDate | date:'short' }}</span>
+        <span>🔻 Prioridade: {{ task.priority }}</span>
+        <label class="status-selector">
+          Status:
+          <select [(ngModel)]="task.status" (ngModelChange)="changeStatus(task, $event)">
+            <option value="pending">Pendente</option>
+            <option value="in-progress">Em andamento</option>
+            <option value="completed">Concluída</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="task-actions">
+        <button (click)="editTask(task)">✏️ Editar</button>
+        <button class="delete-btn" (click)="deleteTask(task.id!)">🗑️ Excluir</button>
+      </div>
+    </div>
+  </div>
+
+</div>

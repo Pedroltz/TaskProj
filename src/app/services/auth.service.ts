@@ -16,7 +16,7 @@ export class AuthService {
     return this.http.post<User>(this.apiUrl, data);
   }
 
-  login(email: string, password: string): Observable<any> {
+  login(email: string, password: string): Observable<User | undefined> {
     const payload = {
       email,
       password,
@@ -27,12 +27,13 @@ export class AuthService {
       switchMap((res: any) => {
         localStorage.setItem('token', res.idToken);
         localStorage.setItem('email', res.email);
-        return this.http.get<User[]>(this.apiUrl); 
+        return this.http.get<User[]>(this.apiUrl);
       }),
       map(users => {
         const user = users.find(u => u.email === localStorage.getItem('email'));
         if (user) {
-          localStorage.setItem('name', user.name); 
+          localStorage.setItem('name', user.name);
+          localStorage.setItem('userId', user.id);
         }
         return user;
       })
