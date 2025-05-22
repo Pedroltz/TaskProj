@@ -1,0 +1,182 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|c:\\users\\pedro\\documents\\projects\\taskapi\\taskapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|solutionrelative:taskapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|c:\\users\\pedro\\documents\\projects\\taskapi\\taskapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|solutionrelative:taskapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|c:\\users\\pedro\\documents\\projects\\taskapi\\taskapi\\models\\dtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|solutionrelative:taskapi\\models\\dtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|c:\\users\\pedro\\documents\\projects\\taskapi\\taskapi\\controllers\\taskitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|solutionrelative:taskapi\\controllers\\taskitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|c:\\users\\pedro\\documents\\projects\\taskapi\\taskapi\\models\\dtos\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|solutionrelative:taskapi\\models\\dtos\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|c:\\users\\pedro\\documents\\projects\\taskapi\\taskapi\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|solutionrelative:taskapi\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|c:\\users\\pedro\\documents\\projects\\taskapi\\taskapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|solutionrelative:taskapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|c:\\users\\pedro\\documents\\projects\\taskapi\\taskapi\\services\\firebaseauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|solutionrelative:taskapi\\services\\firebaseauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|c:\\users\\pedro\\documents\\projects\\taskapi\\taskapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|solutionrelative:taskapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|c:\\users\\pedro\\documents\\projects\\taskapi\\taskapi\\auth\\firebaseauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92E7EEE2-2909-28DC-25DD-33558F5B8EE8}|TaskApi\\TaskApi.csproj|solutionrelative:taskapi\\auth\\firebaseauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Models\\DTOs\\CreateUserDto.cs",
+              "RelativeDocumentMoniker": "TaskApi\\Models\\DTOs\\CreateUserDto.cs",
+              "ToolTip": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Models\\DTOs\\CreateUserDto.cs",
+              "RelativeToolTip": "TaskApi\\Models\\DTOs\\CreateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T23:27:24.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateTaskDto.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Models\\DTOs\\CreateTaskDto.cs",
+              "RelativeDocumentMoniker": "TaskApi\\Models\\DTOs\\CreateTaskDto.cs",
+              "ToolTip": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Models\\DTOs\\CreateTaskDto.cs",
+              "RelativeToolTip": "TaskApi\\Models\\DTOs\\CreateTaskDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T23:10:09.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TaskItem.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Models\\TaskItem.cs",
+              "RelativeDocumentMoniker": "TaskApi\\Models\\TaskItem.cs",
+              "ToolTip": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Models\\TaskItem.cs",
+              "RelativeToolTip": "TaskApi\\Models\\TaskItem.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAQwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T23:08:13.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaskItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Controllers\\TaskItemsController.cs",
+              "RelativeDocumentMoniker": "TaskApi\\Controllers\\TaskItemsController.cs",
+              "ToolTip": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Controllers\\TaskItemsController.cs",
+              "RelativeToolTip": "TaskApi\\Controllers\\TaskItemsController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAmwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T23:07:46.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Models\\User.cs",
+              "RelativeDocumentMoniker": "TaskApi\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Models\\User.cs",
+              "RelativeToolTip": "TaskApi\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T23:05:42.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "TaskApi\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "TaskApi\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAmwDoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T23:03:42.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Program.cs",
+              "RelativeDocumentMoniker": "TaskApi\\Program.cs",
+              "ToolTip": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Program.cs",
+              "RelativeToolTip": "TaskApi\\Program.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAcwEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T23:03:11.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FirebaseAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Services\\FirebaseAuthService.cs",
+              "RelativeDocumentMoniker": "TaskApi\\Services\\FirebaseAuthService.cs",
+              "ToolTip": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Services\\FirebaseAuthService.cs",
+              "RelativeToolTip": "TaskApi\\Services\\FirebaseAuthService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T23:03:00.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\appsettings.json",
+              "RelativeDocumentMoniker": "TaskApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\appsettings.json",
+              "RelativeToolTip": "TaskApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-21T23:01:35.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FirebaseAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Auth\\FirebaseAuthService.cs",
+              "RelativeDocumentMoniker": "TaskApi\\Auth\\FirebaseAuthService.cs",
+              "ToolTip": "C:\\Users\\pedro\\Documents\\Projects\\TaskAPI\\TaskApi\\Auth\\FirebaseAuthService.cs",
+              "RelativeToolTip": "TaskApi\\Auth\\FirebaseAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T23:01:09.067Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

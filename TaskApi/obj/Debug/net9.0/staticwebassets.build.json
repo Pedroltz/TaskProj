@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "WaH/K4/w+CYbcIrBuMnT8fIb0OmkbKgcegmUOOr2WRI=",
+  "Source": "TaskApi",
+  "BasePath": "_content/TaskApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
