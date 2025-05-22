@@ -1,59 +1,128 @@
-# TaskAngular
+# 🗂️ TaskAPI + Angular Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+Este projeto é um sistema de gerenciamento de tarefas com autenticação via Firebase. Ele permite que usuários se cadastrem, façam login e gerenciem suas tarefas de forma visual e interativa.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🛠️ Tecnologias Utilizadas
 
-```bash
-ng serve
-```
+### Backend (.NET 9 - Web API)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- ASP.NET Core Web API
+- Entity Framework Core
+- SQL Server (pode ser local ou remoto)
+- Firebase Admin SDK (autenticação)
 
-## Code scaffolding
+### Frontend (Angular 17+)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Angular Standalone Components
+- Angular Forms + HttpClient
+- Firebase REST API para login
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🚀 Como Rodar o Projeto
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+### 1. Clonar o repositório
 
 ```bash
-ng build
+git clone https://github.com/seu-usuario/task-app.git
+cd task-app
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 🔧 Backend (.NET)
 
-## Running unit tests
+### Pré-requisitos
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- [.NET 9 SDK](https://dotnet.microsoft.com/download)
+- SQL Server (ou Azure SQL, LocalDB etc.)
+- Firebase Admin SDK + chave JSON (arquivo `firebase-key.json`)
+
+### Setup do banco
+
+1. No `appsettings.json`, configure sua `DefaultConnection` para apontar para o seu banco SQL:
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=localhost;Database=TaskDb;Trusted_Connection=True;TrustServerCertificate=True"
+}
+```
+
+2. Execute os comandos:
 
 ```bash
-ng test
+cd TaskAPI/TaskApi
+dotnet ef database update
+dotnet run
 ```
 
-## Running end-to-end tests
+O servidor estará rodando em: `http://localhost:5261`
 
-For end-to-end (e2e) testing, run:
+---
+
+## 🌐 Frontend (Angular)
+
+### Pré-requisitos
+
+- Node.js (18+)
+- Angular CLI
+
+### Instalação
 
 ```bash
-ng e2e
+cd TaskAngular/TaskAngular
+npm install
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+A aplicação Angular estará em: `http://localhost:4200`
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🔐 Firebase - Autenticação
+
+1. Vá até o [Firebase Console](https://console.firebase.google.com/)
+2. Crie um novo projeto
+3. Ative o provedor de autenticação por **E-mail e Senha**
+4. Crie uma chave de serviço (JSON) em:  
+   `Configurações do projeto > Contas de serviço > Gerar nova chave privada`
+
+5. Coloque esse JSON no backend e renomeie para:  
+   `firebase-key.json`
+
+---
+
+## 🧩 Funcionalidades
+
+- Registro de usuários (com Firebase Auth)
+- Login e proteção de rotas (com Firebase token)
+- Criar, editar, excluir e listar tarefas por usuário
+- Atualização rápida de status
+- Interface responsiva com componentes standalone
+
+---
+
+## 📌 Extras
+
+- A aplicação é modular e separada por pastas de pages e componentes
+- O `NavbarComponent` exibe o nome do usuário logado e botão de logout
+- O `AuthGuard` protege a página de tarefas caso o usuário não esteja logado
+
+---
+
+## 🧪 Testes Rápidos
+
+### Criar um novo usuário
+
+- Acesse `/register` no frontend
+- Preencha nome, email e senha válidos
+
+### Criar uma tarefa
+
+- Após login, clique em "Criar Nova Tarefa"
+- Preencha os campos e salve
+
+### Editar ou deletar
+
+- Use os botões diretamente nas tarefas
+
