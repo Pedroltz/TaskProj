@@ -1,4 +1,4 @@
-# Documentação da API - TaskApi (.NET 8 + EF Core)
+# Documentação da API - TaskApi (.NET 9 + EF Core)
 
 Esta é uma API RESTful para gerenciamento de **usuários** e **tarefas** utilizando ASP.NET Core e Entity Framework Core.
 
