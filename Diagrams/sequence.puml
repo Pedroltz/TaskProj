@@ -1,0 +1,18 @@
+@startuml
+actor "Usuário" as User
+participant HomeComponent
+participant TaskService
+participant TaskItemsController
+participant ApplicationDbContext
+participant Database
+
+User -> HomeComponent : Preenche formulário\n e clica em "Criar"
+HomeComponent -> TaskService : createTaskForUser(userId, payload)
+TaskService -> TaskItemsController : POST /api/users/{userId}/tasks
+TaskItemsController -> ApplicationDbContext : TaskItems.Add(dto)
+ApplicationDbContext -> Database : INSERT TaskItem
+Database --> ApplicationDbContext : OK
+TaskItemsController --> TaskService : retorna TaskItem
+TaskService --> HomeComponent : retorna Observable<TaskItem>
+HomeComponent --> User : atualiza lista na tela
+@enduml

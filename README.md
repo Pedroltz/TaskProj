@@ -126,3 +126,22 @@ A aplicação Angular estará em: `http://localhost:4200`
 
 - Use os botões diretamente nas tarefas
 
+---
+
+## 🧭 Diagramas do Projeto
+
+Abaixo estão os diagramas UML que representam a estrutura e os fluxos do projeto:
+
+### 📄 Diagrama de Casos de Uso
+
+![Casos de Uso](./Diagrams/imgs/CasoUso.png)
+
+### 🧱 Diagrama de Classes
+
+![Diagrama de Classes](./Diagrams/imgs/DiagramaClasse.png)
+
+### 🔁 Diagrama de Sequência
+
+![Diagrama de Sequência](./Diagrams/imgs/Sequencia.png)
+
+

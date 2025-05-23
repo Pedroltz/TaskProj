@@ -1,0 +1,19 @@
+@startuml
+actor "Usuário" as User
+
+usecase "Registrar\nusuário"                  as UC1
+usecase "Login\nautenticar"                   as UC2
+usecase "Listar\nminhas tarefas"              as UC3
+usecase "Criar\nnova tarefa"                  as UC4
+usecase "Atualizar\ntarefa"                   as UC5
+usecase "Deletar\ntarefa"                     as UC6
+usecase "Alterar\nstatus da tarefa"           as UC7
+
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+User --> UC5
+User --> UC6
+User --> UC7
+@enduml

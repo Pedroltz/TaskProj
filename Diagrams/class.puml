@@ -1,0 +1,74 @@
+@startuml
+package "API (.NET Core)" {
+  class User {
+    - Id: string
+    - Name: string
+    - Email: string
+    - Password: string
+    - Tasks: ICollection<TaskItem>
+  }
+  class TaskItem {
+    - Id: Guid
+    - Title: string
+    - Description: string
+    - DueDate: DateTime
+    - Priority: int
+    - Status: string
+    - UserId: string
+  }
+  class CreateUserDto {
+    + Name: string
+    + Email: string
+    + Password: string
+  }
+  class CreateTaskDto {
+    + Title: string
+    + Description?: string
+    + DueDate?: DateTime
+    + Priority: int
+    + Status: string
+  }
+  class ApplicationDbContext {
+    + TaskItems: DbSet<TaskItem>
+    + Users: DbSet<User>
+  }
+  class FirebaseAuthService {
+    + RegisterAsync(dto): Task<User>
+    + LoginAsync(email, pass): Task<string>
+  }
+
+  User "1" -- "0..*" TaskItem
+  ApplicationDbContext ..> User
+  ApplicationDbContext ..> TaskItem
+  TaskItem --> User : navigation
+}
+package "Front-End (Angular)" {
+  class AuthService {
+    - apiUrl: string
+    - apiKey: string
+    + register()
+    + login()
+  }
+  class TaskService {
+    - baseUrl: string
+    + getUserWithTasks()
+    + createTaskForUser()
+    + updateTask()
+    + deleteTask()
+  }
+  class HomeComponent {
+    - tasks: TaskItem[]
+    + ngOnInit()
+    + loadTasks()
+    + changeStatus()
+  }
+  class RegisterComponent
+  class LoginComponent
+  class NavbarComponent
+
+  AuthService --> RegisterComponent
+  AuthService --> LoginComponent
+  TaskService --> HomeComponent
+  HomeComponent --> NavbarComponent
+}
+@enduml
