@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TaskApi.Migrations
 {
     /// <inheritdoc />
-    public partial class NewBase : Migration
+    public partial class Projeto1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

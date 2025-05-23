@@ -12,8 +12,8 @@ using TaskApi.Data;
 namespace TaskApi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250522024446_NewBase")]
-    partial class NewBase
+    [Migration("20250522224901_Projeto1")]
+    partial class Projeto1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

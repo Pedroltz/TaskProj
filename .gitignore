@@ -1,0 +1,17 @@
+# Firebase
+firebase-key.json
+
+# .NET stuff
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vscode/
+*.vs/
+
+# Configs locais
+appsettings.Development.json

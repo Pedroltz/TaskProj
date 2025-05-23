@@ -1,3 +1,4 @@
+
 using Xunit;
 using TaskApi.Controllers;
 using TaskApi.Data;
@@ -58,6 +59,20 @@ namespace TaskApi.Tests
             var result = await controller.GetById(user.Id);
 
             Assert.Equal(user.Id, result.Value!.Id);
+        }
+
+        [Fact]
+        public async Task DeleteUser_RemovesUser()
+        {
+            using var context = GetDb();
+            var user = new User { Id = Guid.NewGuid(), Name = "Deletar", Email = "x@x.com", Password = "123" };
+            context.Users.Add(user);
+            await context.SaveChangesAsync();
+
+            var controller = new UsersController(context);
+            var result = await controller.Delete(user.Id);
+
+            Assert.IsType<NoContentResult>(result);
         }
     }
 }

@@ -1,3 +1,4 @@
+
 using Xunit;
 using Microsoft.EntityFrameworkCore;
 using TaskApi.Controllers;
@@ -46,6 +47,19 @@ namespace TaskApi.Tests
             var result = await controller.GetById(Guid.NewGuid());
 
             Assert.IsType<NotFoundResult>(result.Result);
+        }
+
+        [Fact]
+        public async Task CreateTask_ReturnsCreatedTask()
+        {
+            using var context = GetInMemoryDbContext();
+            var controller = new TaskItemsController(context);
+            var task = new TaskItem { Title = "Nova Tarefa", UserId = Guid.NewGuid() };
+
+            var result = await controller.Create(task);
+            var created = Assert.IsType<CreatedAtActionResult>(result.Result);
+            var createdTask = Assert.IsType<TaskItem>(created.Value);
+            Assert.Equal(task.Title, createdTask.Title);
         }
     }
 }
