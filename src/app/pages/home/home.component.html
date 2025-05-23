@@ -52,6 +52,7 @@
     <div *ngFor="let task of tasks" class="task-card">
       <h3>{{ task.title }}</h3>
       <p>{{ task.description }}</p>
+
       <div class="task-meta">
         <span>📅 {{ task.dueDate | date:'short' }}</span>
         <span>🔻 Prioridade: {{ task.priority }}</span>

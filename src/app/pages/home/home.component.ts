@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
   };
 
   tasks: Task[] = [];
-  showForm = false;
+  showForm: boolean = false;
   editingTaskId: string | null = null;
 
   constructor(private http: HttpClient) {}
@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
 
   toggleForm(): void {
     this.showForm = !this.showForm;
-    this.cancelEdit();
+    if (!this.showForm) this.cancelEdit();
   }
 
   loadTasks(): void {

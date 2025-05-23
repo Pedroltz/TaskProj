@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 0 1rem;
 }
 
 .toggle-button {
@@ -93,7 +94,8 @@
 
 .task-meta {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   font-size: 0.9rem;
   color: var(--text);
 }
@@ -121,8 +123,13 @@
   background: #cc4444;
 }
 
+.status-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .status-selector select {
-  margin-left: 0.5rem;
   padding: 0.25rem;
   border-radius: 4px;
   background: var(--input-bg);
@@ -133,6 +140,7 @@
 .task-actions {
   margin-top: 1rem;
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
@@ -162,3 +170,24 @@
   background: #cc4444;
 }
 
+/* Responsividade para smartphones */
+@media (max-width: 600px) {
+  .task-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toggle-button button {
+    width: 100%;
+  }
+
+  .task-form,
+  .task-list {
+    padding: 1rem;
+  }
+}
