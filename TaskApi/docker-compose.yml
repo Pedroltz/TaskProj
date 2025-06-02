@@ -1,0 +1,32 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "StrongPass123!" # 🔒 Considere usar secrets para senhas em produção
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    networks:
+      - tasknet
+    volumes: # 👈 Adicione esta seção
+      - sqlserver_data:/var/opt/mssql
+
+  taskapi:
+    build: .
+    container_name: task-api-container
+    ports:
+      - "5261:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=TaskDb;User Id=sa;Password=StrongPass123!;TrustServerCertificate=True;MultipleActiveResultSets=True
+    depends_on:
+      - sqlserver
+    networks:
+      - tasknet
+
+networks:
+  tasknet:
+    driver: bridge
+
+volumes: # 👈 Adicione esta seção no final do arquivo
+  sqlserver_data: {}

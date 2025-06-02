@@ -66,8 +66,7 @@
               "RelativeToolTip": "TaskApi\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T21:56:39.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T21:56:39.045Z"
             },
             {
               "$type": "Document",
@@ -91,8 +90,7 @@
               "RelativeToolTip": "TaskApi\\Models\\DTOs\\CreateTaskDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T23:10:09.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T23:10:09.383Z"
             },
             {
               "$type": "Document",
@@ -104,8 +102,7 @@
               "RelativeToolTip": "TaskApi\\Models\\TaskItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T23:08:13.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T23:08:13.655Z"
             },
             {
               "$type": "Document",
@@ -117,8 +114,7 @@
               "RelativeToolTip": "TaskApi\\Controllers\\TaskItemsController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T23:07:46.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T23:07:46.541Z"
             },
             {
               "$type": "Document",
@@ -130,8 +126,7 @@
               "RelativeToolTip": "TaskApi\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T23:05:42.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T23:05:42.229Z"
             },
             {
               "$type": "Document",
@@ -168,8 +163,7 @@
               "RelativeToolTip": "TaskApi\\Services\\FirebaseAuthService.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAowBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T23:03:00.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T23:03:00.051Z"
             },
             {
               "$type": "Document",

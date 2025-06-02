@@ -164,3 +164,4 @@ C:\Users\pedro\Documents\Projects\TaskAPI\TaskApi.Tests\obj\Debug\net9.0\refint\
 C:\Users\pedro\Documents\Projects\TaskAPI\TaskApi.Tests\obj\Debug\net9.0\TaskApi.Tests.pdb
 C:\Users\pedro\Documents\Projects\TaskAPI\TaskApi.Tests\obj\Debug\net9.0\TaskApi.Tests.genruntimeconfig.cache
 C:\Users\pedro\Documents\Projects\TaskAPI\TaskApi.Tests\obj\Debug\net9.0\ref\TaskApi.Tests.dll
+C:\Users\pedro\Documents\Projects\TaskAPI\TaskApi.Tests\obj\Debug\net9.0\TaskApi.Tests.sourcelink.json
