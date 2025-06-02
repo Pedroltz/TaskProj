@@ -46,6 +46,18 @@ export class HomeComponent implements OnInit {
     this.loadTasks();
   }
 
+  get pendingTasks(): Task[] {
+    return this.tasks.filter(task => task.status === 'pending').sort((a, b) => new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime());
+  }
+
+  get inProgressTasks(): Task[] {
+    return this.tasks.filter(task => task.status === 'in-progress').sort((a, b) => new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime());
+  }
+
+  get completedTasks(): Task[] {
+    return this.tasks.filter(task => task.status === 'completed').sort((a, b) => new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime());
+  }
+
   toggleForm(): void {
     this.showForm = !this.showForm;
     if (!this.showForm) this.cancelEdit();

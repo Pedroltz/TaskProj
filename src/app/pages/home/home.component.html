@@ -45,32 +45,83 @@
     </form>
   </div>
 
-  <div class="task-list">
-    <h2>Minhas Tarefas</h2>
-    <div *ngIf="tasks.length === 0" class="empty-state">Nenhuma tarefa ainda.</div>
-
-    <div *ngFor="let task of tasks" class="task-card">
-      <h3>{{ task.title }}</h3>
-      <p>{{ task.description }}</p>
-
-      <div class="task-meta">
-        <span>📅 {{ task.dueDate | date:'short' }}</span>
-        <span>🔻 Prioridade: {{ task.priority }}</span>
-        <label class="status-selector">
-          Status:
-          <select [(ngModel)]="task.status" (ngModelChange)="changeStatus(task, $event)">
-            <option value="pending">Pendente</option>
-            <option value="in-progress">Em andamento</option>
-            <option value="completed">Concluída</option>
-          </select>
-        </label>
+  <div class="task-columns-container">
+    <!-- Coluna Pendente -->
+    <div class="task-column column-pending">
+      <h2>Pendente</h2>
+      <div *ngIf="pendingTasks.length === 0" class="empty-state">Nenhuma tarefa pendente.</div>
+      <div *ngFor="let task of pendingTasks" class="task-card">
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
+        <div class="task-meta">
+          <span>📅 {{ task.dueDate | date:'short' }}</span>
+          <span>Prioridade: {{ task.priority === 1 ? 'Baixa' : task.priority === 2 ? 'Média' : 'Alta' }}</span>
+          <label class="status-selector">
+            Status:
+            <select [(ngModel)]="task.status" (ngModelChange)="changeStatus(task, $event)">
+              <option value="pending">Pendente</option>
+              <option value="in-progress">Em andamento</option>
+              <option value="completed">Concluída</option>
+            </select>
+          </label>
+        </div>
+        <div class="task-actions">
+          <button (click)="editTask(task)">✏️ Editar</button>
+          <button class="delete-btn" (click)="deleteTask(task.id!)">🗑️ Excluir</button>
+        </div>
       </div>
+    </div>
 
-      <div class="task-actions">
-        <button (click)="editTask(task)">✏️ Editar</button>
-        <button class="delete-btn" (click)="deleteTask(task.id!)">🗑️ Excluir</button>
+    <!-- Coluna Em Andamento -->
+    <div class="task-column column-in-progress">
+      <h2>Em Andamento</h2>
+      <div *ngIf="inProgressTasks.length === 0" class="empty-state">Nenhuma tarefa em andamento.</div>
+      <div *ngFor="let task of inProgressTasks" class="task-card">
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
+        <div class="task-meta">
+          <span>📅 {{ task.dueDate | date:'short' }}</span>
+          <span>Prioridade: {{ task.priority === 1 ? 'Baixa' : task.priority === 2 ? 'Média' : 'Alta' }}</span>
+          <label class="status-selector">
+            Status:
+            <select [(ngModel)]="task.status" (ngModelChange)="changeStatus(task, $event)">
+              <option value="pending">Pendente</option>
+              <option value="in-progress">Em andamento</option>
+              <option value="completed">Concluída</option>
+            </select>
+          </label>
+        </div>
+        <div class="task-actions">
+          <button (click)="editTask(task)">✏️ Editar</button>
+          <button class="delete-btn" (click)="deleteTask(task.id!)">🗑️ Excluir</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coluna Concluída -->
+    <div class="task-column column-completed">
+      <h2>Concluída</h2>
+      <div *ngIf="completedTasks.length === 0" class="empty-state">Nenhuma tarefa concluída.</div>
+      <div *ngFor="let task of completedTasks" class="task-card">
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
+        <div class="task-meta">
+          <span>📅 {{ task.dueDate | date:'short' }}</span>
+          <span>Prioridade: {{ task.priority === 1 ? 'Baixa' : task.priority === 2 ? 'Média' : 'Alta' }}</span>
+          <label class="status-selector">
+            Status:
+            <select [(ngModel)]="task.status" (ngModelChange)="changeStatus(task, $event)">
+              <option value="pending">Pendente</option>
+              <option value="in-progress">Em andamento</option>
+              <option value="completed">Concluída</option>
+            </select>
+          </label>
+        </div>
+        <div class="task-actions">
+          <button (click)="editTask(task)">✏️ Editar</button>
+          <button class="delete-btn" (click)="deleteTask(task.id!)">🗑️ Excluir</button>
+        </div>
       </div>
     </div>
   </div>
-
 </div>

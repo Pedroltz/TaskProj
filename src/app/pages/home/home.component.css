@@ -1,9 +1,9 @@
 .home-container {
-  max-width: 700px;
+  max-width: 1650px; /* Aumentado para colunas mais largas */
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem; /* Leve aumento no espaçamento vertical principal */
   padding: 0 1rem;
 }
 
@@ -27,24 +27,22 @@
   background-color: #ff79c6;
 }
 
-.task-form,
-.task-list {
+.task-form {
   background: var(--card);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-.task-form h2,
-.task-list h2 {
-  margin-bottom: 1rem;
-  color: var(--accent);
-}
-
 .task-form form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.task-form h2 {
+  margin-bottom: 1rem;
+  color: var(--accent);
 }
 
 .task-form label {
@@ -79,12 +77,50 @@
   background: #ff79c6;
 }
 
+.task-columns-container {
+  display: flex;
+  gap: 2rem; /* Aumentado o espaço entre as colunas */
+}
+
+.task-column {
+  flex: 1; /* Cada coluna ocupa espaço igual */
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Aumentado o espaço entre os cards dentro da coluna */
+}
+
+.task-column h2 {
+  color: var(--accent);
+  margin-top: 0; /* Remover margem superior padrão do h2 */
+  margin-bottom: 1rem; /* Mais espaço abaixo do título da coluna */
+}
+
+/* Estilos específicos para cada coluna com borda superior colorida */
+.column-pending {
+  border-top: 4px solid var(--yellow, #f1fa8c); /* Amarelo Dracula */
+}
+
+.column-in-progress {
+  border-top: 4px solid var(--cyan, #8be9fd); /* Ciano Dracula */
+}
+
+.column-completed {
+  border-top: 4px solid var(--green, #50fa7b); /* Verde Dracula */
+}
+
+
 .task-card {
   background: var(--input-bg);
-  padding: 1rem;
+  padding: 1.25rem; /* Mais padding interno no card */
   border-radius: 6px;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */ /* Removido, o gap da .task-column já cuida disso */
   position: relative;
+  border: 1px solid #44475a; /* Borda sutil para destacar o card */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra mais leve para o card */
 }
 
 .task-card h3 {
@@ -96,26 +132,26 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-bottom: 0.75rem; /* Espaço antes das ações */
   font-size: 0.9rem;
   color: var(--text);
 }
 
 .empty-state {
   font-style: italic;
-  color: #aaa;
+  color: var(--text-secondary, #aaa); /* Usar variável se existir, senão fallback */
+  padding: 1rem;
+  text-align: center;
 }
 
 .delete-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  /* position: absolute; top: 1rem; right: 1rem; */ /* Removido para que flua com .task-actions */
   background: #ff5555;
   border: none;
   border-radius: 4px;
   padding: 0.25rem 0.75rem;
   color: white;
   font-weight: bold;
-  cursor: pointer;
   transition: background 0.2s;
 }
 
@@ -141,7 +177,7 @@
   margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.75rem; /* Mais espaço entre os botões de ação */
 }
 
 .task-actions button {
@@ -150,6 +186,7 @@
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
 }
 
 .task-actions button:first-child {
@@ -158,16 +195,21 @@
 }
 
 .task-actions button:first-child:hover {
-  background: #7080c0;
+  background: #7a8bcf;
+}
+
+.task-actions button:active {
+  transform: translateY(1px);
 }
 
 .task-actions .delete-btn {
-  background: #ff5555;
+  /* background: #ff5555; */ /* Já definido no .delete-btn global */
   color: white;
 }
 
 .task-actions .delete-btn:hover {
-  background: #cc4444;
+  /* background: #cc4444; */ /* Já definido no .delete-btn:hover global */
+  background: #e04444; /* Leve ajuste para consistência */
 }
 
 /* Responsividade para smartphones */
@@ -175,6 +217,7 @@
   .task-meta {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.75rem; /* Ajuste de gap para meta em mobile */
   }
 
   .task-actions {
@@ -186,8 +229,16 @@
     width: 100%;
   }
 
-  .task-form,
-  .task-list {
+  .task-form {
     padding: 1rem;
+  }
+
+  .task-columns-container {
+    flex-direction: column; /* Empilha as colunas */
+  }
+
+  .task-column {
+    padding: 1rem; /* Padding menor para colunas em mobile */
+    gap: 1rem; /* Espaço menor entre cards em mobile */
   }
 }
